@@ -2,6 +2,7 @@
 
 base:
   project: predictive-maintenance-2.0
+  label: "Air temperature [K]"
   
 data_source: 
   s3_source: data/processed/ai4i2020.csv
@@ -9,5 +10,12 @@ data_source:
 load_data:
   raw: data/raw/ai4i2020_raw.csv
   prepared: data/processed/ai4i2020.csv
+
+split_data:
+  test_features_path: data/processed/test_features.csv
+  test_labels_path: data/processed/test_labels.csv
+  training_features_path: data/processed/training_features.csv
+  training_labels_path: data/processed/training_labels.csv
+  test_size: 0.2
 
 model_dir: saved_models 
