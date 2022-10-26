@@ -1,9 +1,11 @@
 ## Gist: Read the params and return the dataframe.
 
+from asyncore import read
 import os
 import yaml
 import pandas as pd
 import argparse
+from read_params import read_params
 
 
 def get_data(config_path):
@@ -13,11 +15,11 @@ def get_data(config_path):
     Args:
         config_path (string): Configuration path for fetching the dataset.
     """
-    # reading the parameters to fetch the data path from the config_path
-    with open(config_path) as yaml_file:
-        config = yaml.safe_load(yaml_file) # a dictionary kind.
+    # reading the parameters to fetch the data path, from the config_path.
+    config = read_params(config_path)
 
     data_path = config["data_source"]["s3_source"]
+    print(config)
     return pd.read_csv(data_path)
 
 
