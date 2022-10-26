@@ -4,3 +4,16 @@ stages:
     deps:
     - data/processed/ai4i2020.csv
     - src/get_data.py
+  
+  split_data:
+    cmd: python src/split_data.py
+    deps:
+    - data/processed/ai4i2020.csv
+    - src/split_data.py
+    outs:
+    - data/processed/training_features.csv
+    - data/processed/training_labels.csv
+    - data/processed/test_features.csv
+    - data/processed/test_labels.csv
+
+

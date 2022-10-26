@@ -1,0 +1,33 @@
+schema: '2.0'
+stages:
+  gather_data:
+    cmd: python src/get_data.py
+    deps:
+    - path: data/processed/ai4i2020.csv
+      md5: 41cf64e25787e93c47aaa77bbc63bf70
+      size: 405506
+    - path: src/get_data.py
+      md5: af8419a4aa909d6bec0921ca720866c0
+      size: 877
+  split_data:
+    cmd: python src/split_data.py
+    deps:
+    - path: data/processed/ai4i2020.csv
+      md5: 41cf64e25787e93c47aaa77bbc63bf70
+      size: 405506
+    - path: src/split_data.py
+      md5: 4291877f4337c3ed2407aad2b3615c87
+      size: 1664
+    outs:
+    - path: data/processed/test_features.csv
+      md5: a5727c947e845d1225add43098ca1d8c
+      size: 69755
+    - path: data/processed/test_labels.csv
+      md5: 3895dbf2a23eeb7a7679ca5d891ad212
+      size: 13384
+    - path: data/processed/training_features.csv
+      md5: 4b8f578a4e19c334cb3d17175e936f36
+      size: 278597
+    - path: data/processed/training_labels.csv
+      md5: 1bfa08b8172750b650bf07d39586a1fb
+      size: 53445
