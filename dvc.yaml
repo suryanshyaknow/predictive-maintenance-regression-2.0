@@ -1,0 +1,6 @@
+stages:
+  gather_data:
+    cmd: python src/get_data.py
+    deps:
+    - data/processed/ai4i2020.csv
+    - src/get_data.py
