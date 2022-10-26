@@ -2,7 +2,6 @@
 
 from asyncore import read
 import os
-import yaml
 import pandas as pd
 import argparse
 from read_params import read_params
@@ -19,12 +18,11 @@ def get_data(config_path):
     config = read_params(config_path)
 
     data_path = config["data_source"]["s3_source"]
-    print(config)
     return pd.read_csv(data_path)
 
 
 if __name__=="__main__":
-    args = argparse.ArgumentParser()
-    args.add_argument("--config", default="params.yaml")
-    parse_args = args.parse_args()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--config", default="params.yaml")
+    parse_args  = parser.parse_args()
     get_data(config_path=parse_args.config)

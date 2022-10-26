@@ -1,6 +1,5 @@
 # Gist: A function just for reading the params from the `configuration file`.
 
-from asyncore import read
 import yaml
 import argparse
 
@@ -12,12 +11,11 @@ def read_params(file_path):
         file_path (string): Path of the configuration file.
 
     Returns:
-        dict: contains all the params and paths in the form of key:val pair.
+        dict: Contains all the params and paths in the form of key:val pair.
     """
     with open(file_path) as yaml_file:
         config = yaml.safe_load(yaml_file)
 
-    print(config)
     return config
 
 if __name__=="__main__":
