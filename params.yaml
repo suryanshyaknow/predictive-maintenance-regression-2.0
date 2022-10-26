@@ -1,0 +1,13 @@
+### A centralized file for controlling all the params within the file.
+
+base:
+  project: predictive-maintenance-2.0
+  
+data_source: 
+  s3_source: data/processed/ai4i2020.csv
+
+load_data:
+  raw: data/raw/ai4i2020_raw.csv
+  prepared: data/processed/ai4i2020.csv
+
+model_dir: saved_models 
