@@ -16,18 +16,18 @@ stages:
       md5: 41cf64e25787e93c47aaa77bbc63bf70
       size: 405506
     - path: src/split_data.py
-      md5: daceb1330457f8213d6bfb10abe7795c
-      size: 2007
+      md5: 6321a8d13790e3a40fa2bac60204452d
+      size: 2011
     outs:
     - path: data/processed/test_features.csv
-      md5: a5727c947e845d1225add43098ca1d8c
+      md5: 20c6c9a476b1fc41639ac3fb3d96186f
       size: 69755
     - path: data/processed/test_labels.csv
-      md5: 3895dbf2a23eeb7a7679ca5d891ad212
+      md5: 3491852dadae93505218e90068dc7eb7
       size: 13384
     - path: data/processed/training_features.csv
-      md5: 4b8f578a4e19c334cb3d17175e936f36
+      md5: f7639bb9cfc58af6a64176940ef111e5
       size: 278597
     - path: data/processed/training_labels.csv
-      md5: 1bfa08b8172750b650bf07d39586a1fb
+      md5: cfcb8f519e94bb880aedec76b134af18
       size: 53445
