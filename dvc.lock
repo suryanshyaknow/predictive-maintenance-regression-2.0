@@ -7,8 +7,8 @@ stages:
       md5: 41cf64e25787e93c47aaa77bbc63bf70
       size: 405506
     - path: src/get_data.py
-      md5: af8419a4aa909d6bec0921ca720866c0
-      size: 877
+      md5: da95130684b52e18a2b284e96f9005e9
+      size: 1113
   split_data:
     cmd: python src/split_data.py
     deps:
@@ -16,8 +16,8 @@ stages:
       md5: 41cf64e25787e93c47aaa77bbc63bf70
       size: 405506
     - path: src/split_data.py
-      md5: 4291877f4337c3ed2407aad2b3615c87
-      size: 1664
+      md5: daceb1330457f8213d6bfb10abe7795c
+      size: 2007
     outs:
     - path: data/processed/test_features.csv
       md5: a5727c947e845d1225add43098ca1d8c

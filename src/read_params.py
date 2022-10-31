@@ -2,6 +2,12 @@
 
 import yaml
 import argparse
+import os
+from logger import Logger
+
+# Creating an object of the class Logger.
+logger_obj = Logger(logger_name=__name__, file_name=__file__, streamLogs=True)
+lgr = logger_obj.get_logger()
 
 def read_params(file_path):
     """Read and return the dictionary containing all the paths and params from the parameterized 
@@ -13,10 +19,12 @@ def read_params(file_path):
     Returns:
         dict: Contains all the params and paths in the form of key:val pair.
     """
-    with open(file_path) as yaml_file:
-        config = yaml.safe_load(yaml_file)
-
-    return config
+    try:
+        with open(file_path) as yaml_file:
+            config = yaml.safe_load(yaml_file)
+        return config
+    except Exception as e:
+        lgr.exception(e)
 
 if __name__=="__main__":
     args = argparse.ArgumentParser()
