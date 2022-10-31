@@ -17,7 +17,7 @@ def split_and_save(cfile_path):  # cfile_path : Configuration File path.
         # fetching the relevants
         config = read_params(cfile_path)
         data_path = config["load_data"]["prepared"]
-        label = config["base"]["label"]
+        target = config["base"]["target"]
         test_size = config["split_data"]["test_size"]
         random_state = config["split_data"]["random_state"]
 
@@ -30,8 +30,8 @@ def split_and_save(cfile_path):  # cfile_path : Configuration File path.
         df = pd.read_csv(data_path)
 
         # features
-        X = df.drop(columns=(label))
-        Y = df[label]
+        X = df.drop(columns=(target))
+        Y = df[target]
 
         # splitting into training and test subsets
         x_train, x_test, y_train, y_test = train_test_split(
