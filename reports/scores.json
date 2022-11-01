@@ -1,0 +1,10 @@
+{
+    "Training Accuracies": {
+        "R-squared": 0.776,
+        "Adjusted R-squared": 0.776
+    },
+    "Test Accuracies": {
+        "R-squared": 0.776,
+        "Adjusted R-squared": 0.771
+    }
+}
