@@ -1,0 +1,46 @@
+{
+    "Air temperature [K]":{
+        "min":295.3,
+        "max":304.5
+    },
+    "Process temperature [K]":{
+        "min":305.7,
+        "max":313.8
+    },
+    "Rotational speed [rpm]":{
+        "min":1168.0,
+        "max":1895.0
+    },
+    "Torque [Nm]":{
+        "min":20.1,
+        "max":67.0
+    },
+    "Tool wear [min]":{
+        "min":0.0,
+        "max":253.0
+    },
+    "Machine failure":{
+        "min":0.0,
+        "max":1.0
+    },
+    "TWF":{
+        "min":0.0,
+        "max":1.0
+    },
+    "HDF":{
+        "min":0.0,
+        "max":1.0
+    },
+    "PWF":{
+        "min":0.0,
+        "max":1.0
+    },
+    "OSF":{
+        "min":0.0,
+        "max":1.0
+    },
+    "RNF":{
+        "min":0.0,
+        "max":1.0
+    }
+}
