@@ -31,3 +31,31 @@ stages:
     - path: data/processed/training_labels.csv
       md5: cfcb8f519e94bb880aedec76b134af18
       size: 53445
+  train_and_evaluate:
+    cmd: python src/train_and_evaluate.py
+    deps:
+    - path: data/processed/test_features.csv
+      md5: 20c6c9a476b1fc41639ac3fb3d96186f
+      size: 69755
+    - path: data/processed/test_labels.csv
+      md5: 3491852dadae93505218e90068dc7eb7
+      size: 13384
+    - path: data/processed/training_features.csv
+      md5: f7639bb9cfc58af6a64176940ef111e5
+      size: 278597
+    - path: data/processed/training_labels.csv
+      md5: cfcb8f519e94bb880aedec76b134af18
+      size: 53445
+    - path: src/train_and_evaluate.py
+      md5: a80a29badd7b4faee43f3a760339dc36
+      size: 6942
+    outs:
+    - path: reports/scores.json
+      md5: 403730f71fd7ca9ab32de854f803dbfc
+      size: 207
+    - path: saved_models/model.pkl
+      md5: ac5614b03d1bf0986e022deb85c09617
+      size: 598
+    - path: saved_transformation_objects/scaler.pkl
+      md5: 1e7f36e4c75d91e706fc85e0fc567ba0
+      size: 907
