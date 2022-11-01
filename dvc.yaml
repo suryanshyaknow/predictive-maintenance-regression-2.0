@@ -16,4 +16,18 @@ stages:
     - data/processed/test_features.csv
     - data/processed/test_labels.csv
 
+  train_and_evaluate:
+    cmd: python src/train_and_evaluate.py
+    deps:
+    - src/train_and_evaluate.py
+    - data/processed/training_features.csv
+    - data/processed/training_labels.csv
+    - data/processed/test_features.csv
+    - data/processed/test_labels.csv
+    metrics:
+    - reports/scores.json:
+        cache: False
+    outs:
+    - saved_transformation_objects/scaler.pkl
+    - saved_models/model.pkl
 
