@@ -19,4 +19,8 @@ split_data:
   test_size: 0.2
   random_state: 42
 
-model_dir: saved_models 
+transformation_dir: saved_transformation_objects
+
+model_dir: saved_models
+
+reports: reports
