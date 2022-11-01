@@ -10,6 +10,8 @@ stages:
     deps:
     - data/processed/ai4i2020.csv
     - src/split_data.py
+    params:
+    - split_data.random_state
     outs:
     - data/processed/training_features.csv
     - data/processed/training_labels.csv

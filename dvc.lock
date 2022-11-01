@@ -9,6 +9,7 @@ stages:
     - path: src/get_data.py
       md5: da95130684b52e18a2b284e96f9005e9
       size: 1113
+
   split_data:
     cmd: python src/split_data.py
     deps:
@@ -18,6 +19,9 @@ stages:
     - path: src/split_data.py
       md5: 6321a8d13790e3a40fa2bac60204452d
       size: 2011
+    params:
+      params.yaml:
+        split_data.random_state: 42
     outs:
     - path: data/processed/test_features.csv
       md5: 20c6c9a476b1fc41639ac3fb3d96186f
