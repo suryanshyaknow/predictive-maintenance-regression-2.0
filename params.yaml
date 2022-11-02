@@ -1,4 +1,4 @@
-### A centralized file for controlling all the params within the file.
+# A centralized file for controlling all the params within the file.
 
 base:
   project: predictive-maintenance-2.0
@@ -19,8 +19,12 @@ split_data:
   test_size: 0.2
   random_state: 42
 
-transformation_dir: saved_transformation_objects
+transformation_dir: 
+- path: saved_transformation_objects
+- scaler_object: saved_transformation_objects/scaler.pkl
 
-model_dir: saved_models
+model_dir: 
+- path: saved_models
+- object: saved_models/model.pkl
 
 reports: reports
