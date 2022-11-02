@@ -47,7 +47,7 @@ class Model:
             self.scaler = StandardScaler()
             self.x_scaled = self._standardize()
             # Saving the StandardScaler object
-            self.scaler_dir = config["transformation_dir"]["path"]
+            self.scaler_dir = config["transformation_dir"]["dir"]
             self._save_scaler()
 
             # building the MODEL..
@@ -59,7 +59,7 @@ class Model:
             self._evaluate_and_report()
 
             # Dir to SAVE the MODEL into..
-            self.mod_dir = config["model_dir"]["path"]
+            self.mod_dir = config["model_dir"]["dir"]
             # Saving the MODEL to the 'saved_models' dir.
             self._save()
 
