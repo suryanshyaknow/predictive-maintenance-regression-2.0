@@ -4,3 +4,4 @@ sklearn
 PyYAML
 pytest
 tox
+flake8
