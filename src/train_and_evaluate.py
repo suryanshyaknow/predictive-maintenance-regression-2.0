@@ -1,7 +1,6 @@
 # Gist: Standardization of features, training an algorithm, building the model and saving it and evaluation.
 
 import pandas as pd
-import numpy as np
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LinearRegression
 from read_params import read_params
@@ -18,7 +17,7 @@ lgr = logger_obj.get_logger()
 
 
 class Model:
-    """A class for scaling the features, then build the linear regression model out of it and training labels, 
+    """A class for scaling the features, then build the linear regression model out of it and training labels,
     model's evaluation using `r-squared` or `adjusted r-squared` metrics and eventually save the model.
     """
 
@@ -34,13 +33,13 @@ class Model:
 
             # TRAINING data
             x_train_path = config["split_data"]["training_features_path"]
-            self.x_train = pd.read_csv(x_train_path) # loading the training features
+            self.x_train = pd.read_csv(x_train_path)  # loading the training features
             y_train_path = config["split_data"]["training_labels_path"]
-            self.y_train = pd.read_csv(y_train_path) # loading the training labels
+            self.y_train = pd.read_csv(y_train_path)  # loading the training labels
 
             # TEST data
             x_test_path = config["split_data"]["test_features_path"]
-            self.x_test = pd.read_csv(x_test_path) # loading the test features
+            self.x_test = pd.read_csv(x_test_path)  # loading the test features
             y_test_path = config["split_data"]["test_labels_path"]
             self.y_test = pd.read_csv(y_test_path)
 
@@ -124,10 +123,10 @@ class Model:
         try:
             lgr.info("Evaluating the metrics..")
 
-             # Scaling the test features too!
+            # Scaling the test features too!
             x_test_scaled = self.scaler.transform(
-                self.x_test) 
-                
+                self.x_test)
+
             # R-squared score
             # TEST SCORE
             test_r2 = round(self.mod.score(x_test_scaled, self.y_test), 3)
@@ -148,12 +147,12 @@ class Model:
             p = len(self.x_train.columns)
 
             # TEST Adjusted R-squared Score
-            test_adjusted_r2 = round( 1 - ( (n-1)*(1 - test_r2) / (n-p-1) ), 3)
+            test_adjusted_r2 = round(1 - ((n-1)*(1 - test_r2) / (n-p-1)), 3)
             lgr.info(
                 f"The `Adjusted R-squared score` of the model on the test set is {test_adjusted_r2}.")
 
             # TRAINING Adjusted R-squared Score
-            training_adjusted_r2 = round( 1 - ( (n-1)*(1 - training_r2) / (n-p-1) ), 3)
+            training_adjusted_r2 = round(1 - ((n-1)*(1 - training_r2) / (n-p-1)), 3)
             lgr.info(
                 f"The `Adjusted R-squared score` of the model on the test set is {training_adjusted_r2}.")
 

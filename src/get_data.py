@@ -1,6 +1,5 @@
 # Gist: Read the params and return the dataframe.
 
-import os
 from logger import Logger
 import pandas as pd
 import argparse
@@ -12,7 +11,7 @@ lgr = logger_obj.get_logger()
 
 
 def get_data(config_path):
-    """A function to fetch the data by reading the parameters from the parameterized path 
+    """A function to fetch the data by reading the parameters from the parameterized path
     i.e. `Configuration Path` containing all the paths and parameters.
 
     Args:

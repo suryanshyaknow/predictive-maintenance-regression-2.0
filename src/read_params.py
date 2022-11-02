@@ -2,15 +2,15 @@
 
 import yaml
 import argparse
-import os
 from logger import Logger
 
 # Creating an object of the class Logger.
 logger_obj = Logger(logger_name=__name__, file_name=__file__, streamLogs=True)
 lgr = logger_obj.get_logger()
 
+
 def read_params(file_path):
-    """Read and return the dictionary containing all the paths and params from the parameterized 
+    """Read and return the dictionary containing all the paths and params from the parameterized
     configuration file's path.
 
     Args:
@@ -26,7 +26,8 @@ def read_params(file_path):
     except Exception as e:
         lgr.exception(e)
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     args = argparse.ArgumentParser()
     args.add_argument("--config", default="params.yaml")
     parse_args = args.parse_args()

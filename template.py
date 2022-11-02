@@ -1,4 +1,4 @@
-### Creating the basic layout of the project manually.
+# Creating the basic layout of the project manually.
 
 import os
 
