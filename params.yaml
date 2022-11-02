@@ -20,11 +20,11 @@ split_data:
   random_state: 42
 
 transformation_dir: 
-- path: saved_transformation_objects
-- scaler_object: saved_transformation_objects/scaler.pkl
+  dir: saved_transformation_objects
+  scaler_object: saved_transformation_objects/scaler.pkl
 
 model_dir: 
-- path: saved_models
-- object: saved_models/model.pkl
+  dir: saved_models
+  object: saved_models/model.pkl
 
 reports: reports
