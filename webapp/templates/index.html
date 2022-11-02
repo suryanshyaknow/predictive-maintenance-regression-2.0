@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>predictive maintenance</title>
+</head>
+
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+                    viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span class="ml-3 text-xl">Predictive Maintenance</span>
+            </a>
+            <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+            </nav>
+            <a href="https://github.com/suryanshyaknow/predictive-maintenance-regression-2.0" class="github"
+                target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M12 .5C5.37.5 0 5.78 0 12.292c0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.335-1.725-1.335-1.725-1.087-.731.084-.716.084-.716 1.205.082 1.838 1.215 1.838 1.215 1.07 1.803 2.809 1.282 3.495.981.108-.763.417-1.282.76-1.577-2.665-.295-5.466-1.309-5.466-5.827 0-1.287.465-2.339 1.235-3.164-.135-.298-.54-1.497.105-3.121 0 0 1.005-.316 3.3 1.209.96-.262 1.98-.392 3-.398 1.02.006 2.04.136 3 .398 2.28-1.525 3.285-1.209 3.285-1.209.645 1.624.24 2.823.12 3.121.765.825 1.23 1.877 1.23 3.164 0 4.53-2.805 5.527-5.475 5.817.42.354.81 1.077.81 2.182 0 1.578-.015 2.846-.015 3.229 0 .309.21.678.825.56C20.565 21.917 24 17.495 24 12.292 24 5.78 18.627.5 12 .5z">
+                    </path>
+                </svg><text>source</text></a>
+
+        </div>
+    </header>
+    <section class="text-gray-600 body-font">
+
+        <div class="container mx-auto flex flex-col px-5 py-24 justify-center items-center">
+            <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero"
+                src="https://carustad.com/img/blog/Car-Maintenance-automobile.jpg">
+            <div class="w-full md:w-2/3 flex flex-col mb-16 items-center text-center">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Prediction Maintenance
+                    Algorithm</h1>
+                <p class="mb-8 leading-relaxed">Predictive maintenance algorithms use data including: all necessary
+                    maintenance, remaining useful life (RUL), historical data, maintenance records, operating
+                    conditions, failure patterns, regression models, and much more.
+                    It goes without saying that real predictive maintenance datasets are generally difficult to obtain
+                    and in particular difficult to publish, we present and
+                    provide a Machine Learning Algorithm that reflects real predictive maintenance Air Temperature
+                    with an accuracy of almost 80% encountered in industry to the best of our knowledge.</p>
+                <div class="form">
+                    <form action="/prediction+results" target="_blank" method="POST">
+                        <div class="flex w-full justify-center items-end">
+                            <div class="relative mr-4 lg:w-full xl:w-1/2 w-2/4 md:w-full text-left">
+                                <label for="hero-field" class="leading-7 text-sm text-gray-600">Process Temperature
+                                    [K]</label>
+                                <input type="number" step="any" placeholder="in Kelvins" id="process_temp"
+                                    name="process_temp"
+                                    class="w-full bg-gray-100 bg-opacity-50 rounded focus:ring-2 focus:ring-indigo-200 focus:bg-transparent border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                            </div>
+
+                            <div class="relative mr-4 lg:w-full xl:w-1/2 w-2/4 md:w-full text-left">
+                                <label for="hero-field" class="leading-7 text-sm text-gray-600">Rotational Speed
+                                    [rpm]</label>
+                                <input type="number" placeholder="in rpm" id="rot_speed" name="rot_speed"
+                                    class="w-full bg-gray-100 bg-opacity-50 rounded focus:ring-2 focus:ring-indigo-200 focus:bg-transparent border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                            </div>
+                        </div>
+                        <div class="flex w-full justify-center items-end">
+                            <div class="relative mr-4 lg:w-full xl:w-1/2 w-2/4 md:w-full text-left">
+                                <label for="hero-field" class="leading-7 text-sm text-gray-600">Torque [Nm]</label>
+                                <input type="number" step="any" placeholder="in Nm" id="torque" name="torque"
+                                    class="w-full bg-gray-100 bg-opacity-50 rounded focus:ring-2 focus:ring-indigo-200 focus:bg-transparent border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                            </div>
+                            <div class="relative mr-4 lg:w-full xl:w-1/2 w-2/4 md:w-full text-left">
+                                <label for="hero-field" class="leading-7 text-sm text-gray-600">Tool Wear [min]</label>
+                                <input type="number" step="any" placeholder="in minutes" id="tool_wear" name="tool_wear"
+                                    class="w-full bg-gray-100 bg-opacity-50 rounded focus:ring-2 focus:ring-indigo-200 focus:bg-transparent border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                            </div>
+                        </div>
+                        <div class="flex w-full justify-center items-end">
+                            <div class="relative mr-4 lg:w-full xl:w-1/2 w-2/4 md:w-full text-left">
+                                <label for="hero-field" class="leading-7 text-sm text-gray-600">Machine Failure</label>
+                                <select id="machine_f" name="machine_f"
+                                    class="w-full bg-gray-100 bg-opacity-50 rounded focus:ring-2 focus:ring-indigo-200 focus:bg-transparent border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                    <option value=0>False</option>
+                                    <option value=1>True</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="flex w-full justify-center items-end">
+                            <div class="relative mr-4 lg:w-full xl:w-1/2 w-2/4 md:w-full text-left">
+                                <label for="hero-field" class="leading-7 text-sm text-gray-600">Tool Wear
+                                    failure</label>
+                                <select id="twf" name="twf"
+                                    class="w-full bg-gray-100 bg-opacity-50 rounded focus:ring-2 focus:ring-indigo-200 focus:bg-transparent border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                    <option value=0>False</option>
+                                    <option value=1>True</option>
+                                </select>
+                            </div>
+                            <div class="relative mr-4 lg:w-full xl:w-1/2 w-2/4 md:w-full text-left">
+                                <label for="hero-field" class="leading-7 text-sm text-gray-600">Heat Dissipation
+                                    failure</label>
+                                <select id="hdf" name="hdf"
+                                    class="w-full bg-gray-100 bg-opacity-50 rounded focus:ring-2 focus:ring-indigo-200 focus:bg-transparent border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                    <option value=0>False</option>
+                                    <option value=1>True</option>
+                                </select>
+                            </div>
+                            <div class="relative mr-4 lg:w-full xl:w-1/2 w-2/4 md:w-full text-left">
+                                <label for="hero-field" class="leading-7 text-sm text-gray-600">Power failure</label>
+                                <select id="pwf" name="pwf"
+                                    class="w-full bg-gray-100 bg-opacity-50 rounded focus:ring-2 focus:ring-indigo-200 focus:bg-transparent border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                    <option value=0>False</option>
+                                    <option value=1>True</option>
+                                </select>
+                            </div>
+                            <div class="relative mr-4 lg:w-full xl:w-1/2 w-2/4 md:w-full text-left">
+                                <label for="hero-field" class="leading-7 text-sm text-gray-600">Overstrain
+                                    failure</label>
+                                <select id="osf" name="osf"
+                                    class="w-full bg-gray-100 bg-opacity-50 rounded focus:ring-2 focus:ring-indigo-200 focus:bg-transparent border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                    <option value=0>False</option>
+                                    <option value=1>True</option>
+                                </select>
+                            </div>
+                            <div class="relative mr-4 lg:w-full xl:w-1/2 w-2/4 md:w-full text-left">
+                                <label for="hero-field" class="leading-7 text-sm text-gray-600">Random failure</label>
+                                <select id="rnf" name="rnf"
+                                    class="w-full bg-gray-100 bg-opacity-50 rounded focus:ring-2 focus:ring-indigo-200 focus:bg-transparent border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                    <option value=0>False</option>
+                                    <option value=1>True</option>
+                                </select>
+                            </div>
+                            <br>
+                        </div>
+                        <div>
+                            <br>
+                            <input
+                                class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+                                value="PREDICT" type="submit">
+                        </div>
+                        <p class="text-sm mt-2 text-gray-500 mb-8 w-full">Air Temperature [K]</p>
+                    </form>
+                </div>
+                <div class="flex">
+                    <a href="analytics" target="_blank">
+                        <button
+                            class="bg-gray-100 inline-flex py-3 px-5 rounded-lg items-center hover:bg-gray-200 focus:outline-none">
+
+                            <span class="ml-4 flex items-start flex-col leading-none">
+                                <span class="text-xs text-gray-600 mb-1">VIEW</span>
+                                <span class="title-font font-medium">Analytics Report</span>
+                            </span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
