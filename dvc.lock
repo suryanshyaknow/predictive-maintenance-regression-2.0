@@ -7,9 +7,8 @@ stages:
       md5: 41cf64e25787e93c47aaa77bbc63bf70
       size: 405506
     - path: src/get_data.py
-      md5: da95130684b52e18a2b284e96f9005e9
-      size: 1113
-
+      md5: 6f906e59cbe7f150550d4ab5bd702341
+      size: 1101
   split_data:
     cmd: python src/split_data.py
     deps:
@@ -51,15 +50,15 @@ stages:
       md5: cfcb8f519e94bb880aedec76b134af18
       size: 53445
     - path: src/train_and_evaluate.py
-      md5: a80a29badd7b4faee43f3a760339dc36
-      size: 6942
+      md5: 3ce9907bdcc63229f7bfc051b027660d
+      size: 6900
     outs:
     - path: reports/scores.json
       md5: 403730f71fd7ca9ab32de854f803dbfc
       size: 207
     - path: saved_models/model.pkl
-      md5: ac5614b03d1bf0986e022deb85c09617
+      md5: 9f66e432cf3c096cd21e5133c3236ec5
       size: 598
     - path: saved_transformation_objects/scaler.pkl
-      md5: 1e7f36e4c75d91e706fc85e0fc567ba0
+      md5: 5646ed9a1fcfbe179d57df186b234e58
       size: 907
