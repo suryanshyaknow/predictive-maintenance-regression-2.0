@@ -55,7 +55,7 @@ class Model:
             lgr.info("Model built successsfully!")
 
             # EVALUATION using `r-squared` and `ajusted r-squared` SCORES.
-            self.scores_path = config["reports"]["dir"]
+            self.scores_dir = config["reports"]["dir"]
             self._evaluate_and_report()
 
             # Dir to SAVE the MODEL into..
@@ -157,8 +157,8 @@ class Model:
                 f"The `Adjusted R-squared score` of the model on the test set is {training_adjusted_r2}.")
 
             # SAVING the SCORES to the REPORTS dir
-            os.makedirs(self.scores_path, exist_ok=True)
-            with open(os.path.join(self.scores_path, 'scores.json'), 'w') as f:
+            os.makedirs(self.scores_dir, exist_ok=True)
+            with open(os.path.join(self.scores_dir, 'scores.json'), 'w') as f:
                 scores = {
                     "Training Accuracies": {"R-squared": training_r2,
                                             "Adjusted R-squared": training_adjusted_r2},

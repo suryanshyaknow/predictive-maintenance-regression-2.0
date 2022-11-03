@@ -50,8 +50,8 @@ stages:
       md5: cfcb8f519e94bb880aedec76b134af18
       size: 53445
     - path: src/train_and_evaluate.py
-      md5: 1a93898da8a79c25bd28a11956187de1
-      size: 6921
+      md5: 82fffd73e304c92ff0c3b4503a6e0131
+      size: 6918
     outs:
     - path: reports/scores.json
       md5: 403730f71fd7ca9ab32de854f803dbfc
