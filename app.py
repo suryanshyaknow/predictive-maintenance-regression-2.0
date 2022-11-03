@@ -31,9 +31,20 @@ def main():
             if request.form:
                 predictors = dict(request.form)
                 lgr.info(predictors)
-            lgr.info("predictors values fetched!")
+                lgr.info("predictors values fetched!")
+                prediction, accuracy = predict.Predict(predictors)
 
-            prediction, accuracy = predict.Predict(predictors)
+                return render_template('results.html', prediction=prediction, accuracy=accuracy)
+
+            elif request.json:
+                lgr.info('fetching the predictors from the API..')
+                predictors = request.json
+                print(predictors)
+                lgr.info(predictors)
+                lgr.info('predictors fetched!')
+                prediction = predict.Predict(predictors)[0]
+
+                return {"Air temperature [K]": prediction}
 
         except Exception as e:
             lgr.exception(e)
@@ -42,7 +53,8 @@ def main():
             return render_template('404.html', error_m1=error_m1, error_m2=error_m2)
 
         else:
-            return render_template('results.html', prediction=prediction, accuracy=accuracy)
+            # return render_template('results.html', prediction=prediction, accuracy=accuracy)
+            pass
 
 
 @app.route('/analytics', methods=['GET'])
