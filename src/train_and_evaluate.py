@@ -55,7 +55,7 @@ class Model:
             lgr.info("Model built successsfully!")
 
             # EVALUATION using `r-squared` and `ajusted r-squared` SCORES.
-            self.scores_path = config["reports"]
+            self.scores_path = config["reports"]["dir"]
             self._evaluate_and_report()
 
             # Dir to SAVE the MODEL into..

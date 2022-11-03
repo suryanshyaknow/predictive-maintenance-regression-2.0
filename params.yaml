@@ -27,4 +27,6 @@ model_dir:
   dir: saved_models
   object: saved_models/model.pkl
 
-reports: reports
+reports: 
+  dir: reports
+  scores: reports/scores.json

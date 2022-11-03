@@ -2,7 +2,7 @@
 
 import yaml
 import argparse
-from logger import Logger
+from src.logger import Logger
 
 # Creating an object of the class Logger.
 logger_obj = Logger(logger_name=__name__, file_name=__file__, streamLogs=True)

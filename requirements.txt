@@ -5,3 +5,4 @@ PyYAML
 pytest
 tox
 flake8
+-e .
