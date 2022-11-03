@@ -50,11 +50,8 @@ def main():
             lgr.exception(e)
             error_m1 = "It's either that you have rendered some inputs empty or its values are out of the range."
             error_m2 = "Please try again with apt values!"
+            
             return render_template('404.html', error_m1=error_m1, error_m2=error_m2)
-
-        else:
-            # return render_template('results.html', prediction=prediction, accuracy=accuracy)
-            pass
 
 
 @app.route('/analytics', methods=['GET'])
