@@ -13,7 +13,7 @@ def Predict(predictors, cfile_path="params.yaml"):
         config = read_params.read_params(cfile_path)
         scaler_path = config["transformation_dir"]["scaler_object"]
         model_path = config["model_dir"]["object"]
-        scores_path = config["reports"]
+        scores_path = config["reports"]["scores"]
 
         # Setting Machine Failure (machine_f) to 1 if even any single of the other failures is True
         if predictors['machine_f'] != '1':
@@ -40,11 +40,13 @@ def Predict(predictors, cfile_path="params.yaml"):
         prediction = mod.predict(preds_scaled)
 
         # Accuracy of the model
-        score = float(json.load(scores_path)["Test Accuracies"]["Adjusted R-squared"])
-        accuracy = score*100
+        with open(scores_path) as f:
+            scores = json.load(f)
+        score = float(scores["Test Accuracies"]["Adjusted R-squared"])
+        accuracy = round(score*100, 3)
         lgr.info(f"Accuracy of the Model: {accuracy}%")
 
-        return prediction
+        return round(prediction[0][0], 3), accuracy
 
     except Exception as e:
         lgr.exception(e)
