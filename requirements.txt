@@ -2,6 +2,8 @@ dvc
 dvc[gdrive]
 sklearn
 PyYAML
+flask
+flask-cors
 pytest
 tox
 flake8
