@@ -2,17 +2,18 @@
 
 import os
 
-# directories name
+# Directories to be created
 dirs = [
     os.path.join("data", "raw"),
     os.path.join("data", "processed"),
     "notebooks",
-    "saved_models",
     "logs",
+    "saved_models",
+    "saved_transformation_objects",
     "src"
 ]
 
-# creating the directories
+# Creating the directories
 for dir in dirs:
     os.makedirs(dir, exist_ok=True)
 
@@ -20,14 +21,14 @@ for dir in dirs:
     with open(os.path.join(dir, ".gitkeep"), "w") as f:
         pass
 
-# files to be created
+# Files to be created
 files = [
     "params.yaml",
     "requirements.txt",
     os.path.join("src", "__init__.py")
 ]
 
-# creating the files
+# Creating the files
 for file in files:
     with open(file, "w") as f:
         f.close()
