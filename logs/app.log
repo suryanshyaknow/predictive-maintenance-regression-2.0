@@ -1,0 +1,6 @@
+2022-11-09 22:46:04,371 __main__ INFO fetching the predictors..
+2022-11-09 22:46:04,374 __main__ INFO {'process_temp': '234', 'rot_speed': '423', 'torque': '432', 'tool_wear': '42', 'machine_f': '0', 'twf': '0', 'hdf': '0', 'pwf': '1', 'osf': '0', 'rnf': '0'}
+2022-11-09 22:46:04,375 __main__ INFO predictors values fetched!
+2022-11-09 23:00:00,405 __main__ INFO fetching the predictors..
+2022-11-09 23:00:00,409 __main__ INFO {'process_temp': '345', 'rot_speed': '5435433', 'torque': '534', 'tool_wear': '534', 'machine_f': '0', 'twf': '0', 'hdf': '0', 'pwf': '0', 'osf': '0', 'rnf': '0'}
+2022-11-09 23:00:00,410 __main__ INFO predictors values fetched!

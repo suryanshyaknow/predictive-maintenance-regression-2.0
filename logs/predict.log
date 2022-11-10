@@ -1,0 +1,16 @@
+2022-11-09 22:46:04,384 src.predict INFO {'process_temp': 234.0, 'rot_speed': 423.0, 'torque': 432.0, 'tool_wear': 42.0, 'machine_f': 1, 'twf': 0.0, 'hdf': 0.0, 'pwf': 1.0, 'osf': 0.0, 'rnf': 0.0}
+2022-11-09 22:46:04,385 src.predict INFO predictors(list format)): [[234.0, 423.0, 432.0, 42.0, 1, 0.0, 0.0, 1.0, 0.0, 0.0]]
+2022-11-09 22:46:06,397 src.predict INFO scaling the predictors to the normal scale..
+2022-11-09 22:46:06,401 src.predict INFO scaled predictors: [[-5.11345256e+01 -8.43124564e+00  4.38636609e+01 -1.04107653e+00
+   5.98912057e+00 -6.88428391e-02 -1.04215772e-01  1.78044938e+01
+  -9.55163009e-02 -4.43765619e-02]] 
+2022-11-09 22:46:06,542 src.predict INFO prediction: [[211.07304057]]
+2022-11-09 22:46:06,543 src.predict INFO Accuracy of the Model: 77.1%
+2022-11-09 23:00:00,419 src.predict INFO {'process_temp': 345.0, 'rot_speed': 5435433.0, 'torque': 534.0, 'tool_wear': 534.0, 'machine_f': 0.0, 'twf': 0.0, 'hdf': 0.0, 'pwf': 0.0, 'osf': 0.0, 'rnf': 0.0}
+2022-11-09 23:00:00,420 src.predict INFO predictors(list format)): [[345.0, 5435433.0, 534.0, 534.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]]
+2022-11-09 23:00:03,378 src.predict INFO scaling the predictors to the normal scale..
+2022-11-09 23:00:03,387 src.predict INFO scaled predictors: [[ 2.35407482e+01  4.19318734e+04  5.53001759e+01  6.68785243e+00
+  -1.66969422e-01 -6.88428391e-02 -1.04215772e-01 -5.61655956e-02
+  -9.55163009e-02 -4.43765619e-02]] 
+2022-11-09 23:00:03,634 src.predict INFO prediction: [[1658.70556449]]
+2022-11-09 23:00:03,643 src.predict INFO Accuracy of the Model: 77.1%
