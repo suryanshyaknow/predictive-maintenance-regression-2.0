@@ -2,6 +2,7 @@ dvc
 dvc[gdrive]
 scikit-learn
 sklearn
+pandas
 PyYAML
 flask
 flask-cors
