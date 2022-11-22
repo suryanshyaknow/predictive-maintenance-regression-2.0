@@ -7,8 +7,8 @@ stages:
       md5: 41cf64e25787e93c47aaa77bbc63bf70
       size: 405506
     - path: src/get_data.py
-      md5: 6f906e59cbe7f150550d4ab5bd702341
-      size: 1101
+      md5: 13203c154aca9605954c09972b550d5f
+      size: 1120
   split_data:
     cmd: python src/split_data.py
     deps:
@@ -16,8 +16,8 @@ stages:
       md5: 41cf64e25787e93c47aaa77bbc63bf70
       size: 405506
     - path: src/split_data.py
-      md5: 6321a8d13790e3a40fa2bac60204452d
-      size: 2011
+      md5: bcbef0b845c61dc93df1b9279ee8bebf
+      size: 2030
     params:
       params.yaml:
         split_data.random_state: 42
@@ -50,8 +50,8 @@ stages:
       md5: cfcb8f519e94bb880aedec76b134af18
       size: 53445
     - path: src/train_and_evaluate.py
-      md5: 82fffd73e304c92ff0c3b4503a6e0131
-      size: 6918
+      md5: 45c9989af8c10d9b63a42e5151739268
+      size: 6937
     outs:
     - path: reports/scores.json
       md5: 403730f71fd7ca9ab32de854f803dbfc
