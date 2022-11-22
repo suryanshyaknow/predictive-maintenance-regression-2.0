@@ -7,7 +7,7 @@ dirs = [
     os.path.join("data", "raw"),
     os.path.join("data", "processed"),
     "notebooks",
-    "logs",
+    ".logs",
     "saved_models",
     "saved_transformation_objects",
     "src"

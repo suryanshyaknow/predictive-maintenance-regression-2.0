@@ -25,7 +25,7 @@ class Logger:
                 '.py', '.log')  # replacing the extension
 
         # since all log files are to be saved in the logs directory.
-        file_path = os.path.join('logs', file_name)
+        file_path = os.path.join('.logs', file_name)
 
         # Creating a File handler for the logger
         f_handler = lg.FileHandler(file_path)
