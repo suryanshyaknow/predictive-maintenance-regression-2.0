@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS, cross_origin
 import os
-from src import logger, predict
+from application_logger import logger
+from predict_via_model import Predict
 
 # Creating an object of the class Logger.
 logger_obj = logger.Logger(
@@ -32,7 +33,7 @@ def main():
                 predictors = dict(request.form)
                 lgr.info(predictors)
                 lgr.info("predictors values fetched!")
-                prediction, accuracy = predict.Predict(predictors)
+                prediction, accuracy = Predict(predictors)
 
                 return render_template('results.html', prediction=prediction, accuracy=accuracy)
 
@@ -42,7 +43,7 @@ def main():
                 print(predictors)
                 lgr.info(predictors)
                 lgr.info('predictors fetched!')
-                prediction = predict.Predict(predictors)[0]
+                prediction = Predict(predictors)[0]
 
                 return {"Air temperature [K]": prediction}
 

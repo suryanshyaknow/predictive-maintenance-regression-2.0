@@ -4,10 +4,10 @@ import pandas as pd
 import argparse
 from sklearn.model_selection import train_test_split
 from read_params import read_params
-from logger import Logger
+from application_logger import logger
 
 # Creating an object of the class Logger.
-logger_obj = Logger(logger_name=__name__, file_name=__file__, streamLogs=True)
+logger_obj = logger.Logger(logger_name=__name__, file_name=__file__, streamLogs=True)
 lgr = logger_obj.get_logger()
 
 

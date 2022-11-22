@@ -1,6 +1,7 @@
 import json
 import pickle
-from src import read_params, logger
+from src import read_params 
+from application_logger import logger
 
 # Creating an object of the class Logger.
 logger_obj = logger.Logger(
@@ -21,8 +22,8 @@ def Predict(predictors, cfile_path="params.yaml"):
     """
     try:
         config = read_params.read_params(cfile_path)
-        scaler_path = config["transformation_dir"]["scaler_object"]
-        model_path = config["model_dir"]["object"]
+        scaler_path = config["prediction_service"]["scaler"]
+        model_path = config["prediction_service"]["model"]
         scores_path = config["reports"]["scores"]
 
         # First and foremost, transform all the values of predictors in the float dtype

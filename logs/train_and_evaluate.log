@@ -11,3 +11,42 @@
 2022-11-11 06:13:25,008 __main__ INFO The `Adjusted R-squared score` of the model on the test set is 0.776.
 2022-11-11 06:13:25,016 __main__ INFO saving the model..
 2022-11-11 06:13:25,016 __main__ INFO The model is successfully saved at 'saved_models'
+2022-11-22 12:20:59,962 __main__ INFO Scaling the features to the normal scale..
+2022-11-22 12:20:59,971 __main__ INFO ..standardization done!
+2022-11-22 12:20:59,974 __main__ INFO saving the scaler object..
+2022-11-22 12:20:59,976 __main__ INFO scaler object saved successfully at "saved_transformation_objects"
+2022-11-22 12:20:59,976 __main__ INFO fitting the training data and building the Linear Regression model..
+2022-11-22 12:21:00,001 __main__ INFO Model built successsfully!
+2022-11-22 12:21:00,002 __main__ INFO Evaluating the metrics..
+2022-11-22 12:21:00,011 __main__ INFO The `R-squared score` of the model on the test set is 0.771.
+2022-11-22 12:21:00,015 __main__ INFO The `R-squared score` of the model on the training set is 0.776.
+2022-11-22 12:21:00,016 __main__ INFO The `Adjusted R-squared score` of the model on the test set is 0.771.
+2022-11-22 12:21:00,016 __main__ INFO The `Adjusted R-squared score` of the model on the test set is 0.776.
+2022-11-22 12:21:00,019 __main__ INFO saving the model..
+2022-11-22 12:21:00,020 __main__ INFO The model is successfully saved at 'saved_models'
+2022-11-22 12:22:00,669 __main__ INFO Scaling the features to the normal scale..
+2022-11-22 12:22:00,673 __main__ INFO ..standardization done!
+2022-11-22 12:22:00,677 __main__ INFO saving the scaler object..
+2022-11-22 12:22:00,679 __main__ INFO scaler object saved successfully at "saved_transformation_objects"
+2022-11-22 12:22:00,680 __main__ INFO fitting the training data and building the Linear Regression model..
+2022-11-22 12:22:00,687 __main__ INFO Model built successsfully!
+2022-11-22 12:22:00,687 __main__ INFO Evaluating the metrics..
+2022-11-22 12:22:00,694 __main__ INFO The `R-squared score` of the model on the test set is 0.771.
+2022-11-22 12:22:00,698 __main__ INFO The `R-squared score` of the model on the training set is 0.776.
+2022-11-22 12:22:00,699 __main__ INFO The `Adjusted R-squared score` of the model on the test set is 0.771.
+2022-11-22 12:22:00,700 __main__ INFO The `Adjusted R-squared score` of the model on the test set is 0.776.
+2022-11-22 12:22:00,701 __main__ INFO saving the model..
+2022-11-22 12:22:00,703 __main__ INFO The model is successfully saved at 'saved_models'
+2022-11-22 12:23:40,866 __main__ INFO Scaling the features to the normal scale..
+2022-11-22 12:23:40,870 __main__ INFO ..standardization done!
+2022-11-22 12:23:40,873 __main__ INFO saving the scaler object..
+2022-11-22 12:23:40,875 __main__ INFO scaler object saved successfully at "saved_transformation_objects"
+2022-11-22 12:23:40,875 __main__ INFO fitting the training data and building the Linear Regression model..
+2022-11-22 12:23:40,884 __main__ INFO Model built successsfully!
+2022-11-22 12:23:40,885 __main__ INFO Evaluating the metrics..
+2022-11-22 12:23:40,891 __main__ INFO The `R-squared score` of the model on the test set is 0.771.
+2022-11-22 12:23:40,894 __main__ INFO The `R-squared score` of the model on the training set is 0.776.
+2022-11-22 12:23:40,894 __main__ INFO The `Adjusted R-squared score` of the model on the test set is 0.771.
+2022-11-22 12:23:40,895 __main__ INFO The `Adjusted R-squared score` of the model on the test set is 0.776.
+2022-11-22 12:23:40,897 __main__ INFO saving the model..
+2022-11-22 12:23:40,898 __main__ INFO The model is successfully saved at 'saved_models'

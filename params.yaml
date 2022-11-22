@@ -30,3 +30,7 @@ model_dir:
 reports: 
   dir: reports
   scores: reports/scores.json
+
+prediction_service:
+  model: prediction_service/model.pkl
+  scaler: prediction_service/scaler.pkl

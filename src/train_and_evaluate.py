@@ -4,7 +4,7 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LinearRegression
 from read_params import read_params
-from logger import Logger
+from application_logger import logger
 
 import pickle
 import json
@@ -12,7 +12,7 @@ import os
 import argparse
 
 # Creating an object of the class Logger.
-logger_obj = Logger(logger_name=__name__, file_name=__file__, streamLogs=True)
+logger_obj = logger.Logger(logger_name=__name__, file_name=__file__, streamLogs=True)
 lgr = logger_obj.get_logger()
 
 
