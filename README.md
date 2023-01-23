@@ -1,9 +1,10 @@
 # About Project
 
-**Project Description**
+### Project Description
 
-Predictive maintenance algorithms use data including: all necessary maintenance, remaining useful life (RUL), historical data, maintenance records, operating conditions, failure patterns, regression models, and much more. It goes without saying that real predictive maintenance datasets are generally difficult to obtain and in particular difficult to publish, so here I did analysis on the synthetiuc dataset that reflects real predictive maintenance encountered in industry to the best of the knowledge. Here, I however tried to regress against the Air Temperature to predict its value with highest accuracy possible, provided all other relevant attributes at hand are known to us -- **Air temperature**, **Rotational speed**, **Torque**, **Tool wear** and the **Machine failures** which further are categorized into five independent faiures viz. **TWF (Tool Wear Failure)**, **HDF (Heat Dissipation Failure)**, **PWF (Power Failure)**, **OSF (Overstarin Failure)** and **RNF (Random failure)**.
-<br>Moreover, the project's pipeline is automated to the scratch via DVC.
+**Predictive maintenance (PdM)** algorithms use data including: all necessary maintenance, remaining useful life (RUL), historical data, maintenance records, operating conditions, failure patterns, regression models, and much more. It goes without saying that real predictive maintenance datasets are generally difficult to obtain and in particular difficult to publish, so here I did analysis on the synthetic dataset that reflects real predictive maintenance encountered in industry to the best of the knowledge. Although PdM revolves around detecting anomalies and possible defects before they happen, here, however, based on befitting predictors (such as Process Temperature, Rotational Speed, Torque, and Tool Wear) and machine failures (like Tool wear, Heat Dissipation, Power, Overstrain, and other Random failures), this project attempts to predict Air Temperature that in actuality is generated using **random walk process**, via a regression algorithm.
+
+Moreover, all the pipelines including CI-CD employed in this project are automated to the scratch via **DVC** (Data Versioning Control) and **GitHub Actions**.
 
 ## About Dataset
 
@@ -18,7 +19,7 @@ The dataset consists of 10,000 data points stored as rows with 14 features in co
 - **torque [Nm]**: torque values are normally distributed around 40 Nm with a Ïƒ = 10 Nm and no negative values.
 - **tool wear [min]**: The quality variants H/M/L add 5/3/2 minutes of tool wear to the used tool in the process. and a 'machine failure' label that indicates, whether the machine has failed in this particular datapoint for any of the following failure modes are true.
 
-### The Machine failure consists of five independent failure modes: 
+**The Machine failure consists of five independent failure modes:** 
 
 - **tool wear failure (TWF)**: the tool will be replaced of fail at a randomly selected tool wear time between 200 and 240 mins (120 times in our dataset). At this point in time, the tool is replaced 69 times, and fails 51 times (randomly assigned).
 - **heat dissipation failure (HDF)**: heat dissipation causes a process failure, if the difference between air- and process temperature is below 8.6 K and the tool's rotational speed is below 1380 rpm. This is the case for 115 data points.
