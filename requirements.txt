@@ -1,7 +1,7 @@
 dvc
 dvc[gdrive]
 scikit-learn
-sklearn
+# sklearn
 pandas
 PyYAML
 flask
